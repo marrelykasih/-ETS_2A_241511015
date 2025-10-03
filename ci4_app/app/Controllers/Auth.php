@@ -22,12 +22,13 @@ class Auth extends BaseController
         $user = $userModel->where('username', $username)->first();
 
         if ($user && password_verify($password, $user['password'])) {
-            // simpan data user ke session
+           
             $session->set([
-                'id'       => $user['id'],
+                'id_pengguna'       => $user['id_pengguna'],
                 'username' => $user['username'],
-                'fullname' => $user['fullname'],
-                'role'     => $user['role'],
+                'email' => $user['email'],
+                'nama_depan'     => $user['nama_depan'],
+                'nama_belakang' => $user['nama_belakang'],
                 'isLoggedIn' => true
             ]);
 

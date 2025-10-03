@@ -22,8 +22,7 @@ $routes->get('courses/create', 'Courses::create');
 $routes->post('courses/store', 'Courses::store');
 $routes->get('courses/delete/(:num)', 'Courses::delete/$1');
 
-// Students (Admin only)
-// Students CRUD
+// admin 
 $routes->get('/students', 'Students::index');              // daftar students
 $routes->get('/students/create', 'Students::create');      // form tambah
 $routes->post('/students/store', 'Students::store');       // simpan baru
